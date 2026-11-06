@@ -4,7 +4,7 @@
 @media (prefers-color-scheme: dark) { :root { color-scheme: dark; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --rule: #3a3a37; --series: #3987e5; --series2: #d95926; --strong: #fb923c; --muted: #7d7b74; --bad: #f97066; --fearmark: #6e2a26; --greedmark: #1f5a3b; } }
 body { background: var(--surface); color: var(--ink); font: 15px/1.5 system-ui, sans-serif; max-width: 860px; margin: 0 auto; padding: 24px 16px; }
 h1 { font-size: 22px; margin: 0; } h2 { font-size: 16px; margin: 28px 0 8px; } p { color: var(--ink2); margin: 4px 0; }
-.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.tip { border-left: 3px solid var(--strong); padding: 6px 10px; } .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
 .tile { border: 1px solid var(--rule); border-radius: 8px; padding: 12px 14px; }
 .tile b { display: block; font-size: 34px; line-height: 1.2; } .tile span { color: var(--ink2); font-size: 13px; } .tile.strong b, .tile.strong span:not(.was):not(.asof) { color: var(--strong); }
 .tile small { font-size: 15px; font-weight: 400; color: var(--ink2); } .tile .was { display: block; margin-top: 4px; font-size: 12px; color: var(--series); } .tile .asof { display: block; margin-top: 2px; font-size: 12px; }
