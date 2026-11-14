@@ -25,7 +25,7 @@ table { border-collapse: collapse; width: 100%; font-size: 13px; } th, td { text
 </style></head><body>
 <h1>Nasdaq 100 emotion gauge</h1>
 <p>2026-11-14. 1 is most fear, 9 is most greed. Professional and Retail are ranked against their last five years. Opinion leaders is a vote of voices. Every tier is a proxy.</p>
-<p>Updated: 15 Nov 2026, 00:10 (BJ).</p>
+<p>Updated: 15 Nov 2026, 00:39 (BJ).</p>
 <p class='market-note'><b>Latest market close: 13 Nov 2026 (NY).</b> Includes it: Nasdaq 100, VXN, Cboe put/call. Does not include it yet: CFTC (data to 3 Nov NY, weekly), AAII (data to 12 Nov NY, weekly). Opinion leaders is a 14-day vote, so it reacts slowly.</p>
 <p>This describes market mood. In testing it did not beat simple price history, so it is not a tested signal and gives no buy or sell view.</p>
 <p>All 17 sources worked on their latest run.</p>
@@ -95,11 +95,9 @@ function draw(panel, from) {
     el('text', {class: 'axis', x: LEFT - 8, y: y(v) + 4, 'text-anchor': 'end'}, svg).textContent = label(v);
   }
   for (const v of isValue ? [] : [2, 8]) el('line', {class: 'zone', x1: LEFT, x2: W - RIGHT, y1: y(v), y2: y(v)}, svg);
-  // Over a year the year is needed to tell the dates apart, so it is added only then.
-  const longRange = (Date.parse(days[days.length - 1]) - Date.parse(days[0])) / 864e5 > 366;
   const axisDay = (iso) => {
-    const [year, month, day] = iso.split('-');
-    return `${Number(day)} ${'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ')[month - 1]}${longRange ? ' ' + year : ''} (NY)`;
+    const [, month, day] = iso.split('-');
+    return `${Number(day)} ${'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ')[month - 1]} (NY)`;
   };
   [[0, 'start'], [Math.floor(days.length / 2), 'middle'], [days.length - 1, 'end']].forEach(([i, anchor]) => {
     el('text', {class: 'axis', x: x(i), y: H - 5, 'text-anchor': anchor}, svg).textContent = axisDay(days[i]);
