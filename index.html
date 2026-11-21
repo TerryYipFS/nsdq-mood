@@ -7,7 +7,7 @@ h1 { font-size: 22px; margin: 0; } h2 { font-size: 16px; margin: 28px 0 8px; } p
 .market-note { border-left: 3px solid var(--strong); padding: 6px 10px; } .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
 .tile { border: 1px solid var(--rule); border-radius: 8px; padding: 12px 14px; }
 .tile b { display: block; font-size: 34px; line-height: 1.2; } .tile span { color: var(--ink2); font-size: 13px; } .tile.strong b, .tile.strong span:not(.was):not(.asof):not(.often):not(.latest) { color: var(--strong); }
-.tile small { font-size: 15px; font-weight: 400; color: var(--ink2); } .tile .was { display: block; margin-top: 4px; font-size: 12px; color: var(--series); } .tile .asof { display: block; margin-top: 2px; font-size: 12px; } .tile .latest { display: block; font-size: 13px; color: var(--latest); } .tile .asof.sep { margin-top: 4px; padding-top: 4px; border-top: 1px dashed var(--rule); } .tile .often { display: block; font-size: 12px; }
+.tile small { font-size: 15px; font-weight: 400; color: var(--ink2); } .tile .was { display: block; margin-top: 4px; font-size: 12px; color: var(--series); } .tile .asof { display: block; margin-top: 2px; font-size: 12px; } .tile .latest { display: block; font-size: 13px; font-weight: 700; color: var(--latest); } .tile .asof.sep { margin-top: 4px; padding-top: 4px; border-top: 1px dashed var(--rule); } .tile .often { display: block; font-size: 12px; }
 .subject { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; } .subject a { font-size: 13px; color: var(--series); }
 table { border-collapse: collapse; width: 100%; font-size: 13px; } th, td { text-align: left; padding: 5px 8px 5px 0; border-bottom: 1px solid var(--rule); }
 .panel { position: relative; margin-bottom: 14px; } .panel svg { display: block; width: 100%; height: auto; }
@@ -25,7 +25,7 @@ table { border-collapse: collapse; width: 100%; font-size: 13px; } th, td { text
 </style></head><body>
 <h1>Nasdaq 100 emotion gauge</h1>
 <p>2026-11-21. 1 is most fear, 9 is most greed. Professional and Retail are ranked against their last five years. Opinion leaders is a vote of voices. Every tier is a proxy.</p>
-<p>Updated: 21 Nov 2026, 19:57 (BJ).</p>
+<p>Updated: 21 Nov 2026, 20:02 (BJ).</p>
 <p class='market-note'><b>Latest market close: 20 Nov 2026 (NY).</b> Includes it: Nasdaq 100, VXN, Cboe put/call. Does not include it yet: CFTC (data to 17 Nov NY, weekly), AAII (data to 19 Nov NY, weekly). Opinion leaders is a 14-day vote, so it reacts slowly.</p>
 <p>This describes market mood. In testing it did not beat simple price history, so it is not a tested signal and gives no buy or sell view.</p>
 <p>All 17 sources worked on their latest run.</p>
